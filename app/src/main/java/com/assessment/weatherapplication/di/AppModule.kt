@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.di
 
 import android.app.Application
 import android.content.Context

@@ -1,5 +1,6 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.di
 
+import com.assessment.weatherapplication.data.remote.WeatherApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.view
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -25,6 +25,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.assessment.weatherapplication.data.local.CityDataStore
+import com.assessment.weatherapplication.di.RetrofitModule
+import com.assessment.weatherapplication.data.repository.WeatherRepository
+import com.assessment.weatherapplication.model.WeatherResponse
+import com.assessment.weatherapplication.viewmodel.WeatherViewModel
 
 @Composable
 fun  HomeScreen(weatherViewModel: WeatherViewModel) {

@@ -21,9 +21,9 @@
 -renamesourcefileattribute SourceFile
 ## ProGuard rules to avoid issues with records (in proguard-rules.pro)
 # Keep MainActivity class
--keep class com.assessment.weatherapplication.MainActivity { *; }
+-keep class com.assessment.weatherapplication.view.MainActivity { *; }
 # Keep the MyWeatherApplication class
--keep class com.assessment.weatherapplication.MyWeatherApplication { *; }
+-keep class com.assessment.weatherapplication.di.MyWeatherApplication { *; }
 # Keep Hilt-related classes from being removed or obfuscated
 -keep class dagger.** { *; }
 -dontwarn dagger.**

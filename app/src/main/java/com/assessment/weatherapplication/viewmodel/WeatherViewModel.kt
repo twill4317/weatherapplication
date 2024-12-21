@@ -1,10 +1,12 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.assessment.weatherapplication.data.repository.WeatherRepository
+import com.assessment.weatherapplication.model.WeatherResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

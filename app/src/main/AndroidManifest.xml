@@ -9,7 +9,7 @@
 
 
     <application
-        android:name="com.assessment.weatherapplication.MyWeatherApplication"
+        android:name="com.assessment.weatherapplication.di.MyWeatherApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +20,7 @@
         android:theme="@style/Theme.WeatherApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.assessment.weatherapplication.MainActivity"
+            android:name="com.assessment.weatherapplication.view.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.WeatherApplication">
             <intent-filter>

@@ -1,15 +1,15 @@
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.assessment.weatherapplication.AppModule
-import com.assessment.weatherapplication.CityDataStore
-import com.assessment.weatherapplication.Condition
-import com.assessment.weatherapplication.Current
-import com.assessment.weatherapplication.Location
-import com.assessment.weatherapplication.MainActivity
-import com.assessment.weatherapplication.RetrofitModule
-import com.assessment.weatherapplication.WeatherApiService
-import com.assessment.weatherapplication.WeatherRepository
-import com.assessment.weatherapplication.WeatherResponse
-import com.assessment.weatherapplication.WeatherViewModel
+import com.assessment.weatherapplication.di.AppModule
+import com.assessment.weatherapplication.data.local.CityDataStore
+import com.assessment.weatherapplication.model.Condition
+import com.assessment.weatherapplication.model.Current
+import com.assessment.weatherapplication.model.Location
+import com.assessment.weatherapplication.view.MainActivity
+import com.assessment.weatherapplication.di.RetrofitModule
+import com.assessment.weatherapplication.data.remote.WeatherApiService
+import com.assessment.weatherapplication.data.repository.WeatherRepository
+import com.assessment.weatherapplication.model.WeatherResponse
+import com.assessment.weatherapplication.viewmodel.WeatherViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -19,9 +19,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.Mock
-import org.mockito.Mockito.*
 import org.mockito.kotlin.whenever
-import kotlin.coroutines.coroutineContext
 
 //import org.mockito.junit.jupiter.MockitoExtension
 //import org.junit.jupiter.api.extension.ExtendWith

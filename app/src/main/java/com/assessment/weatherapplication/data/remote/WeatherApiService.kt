@@ -1,5 +1,6 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.data.remote
 
+import com.assessment.weatherapplication.model.WeatherResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

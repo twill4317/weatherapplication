@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication.ui.theme
+package com.assessment.weatherapplication.view.theme
 
 import android.app.Activity
 import android.os.Build

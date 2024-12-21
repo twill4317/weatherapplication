@@ -1,5 +1,6 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.data.repository
 
+import com.assessment.weatherapplication.model.WeatherResponse
 import kotlinx.coroutines.flow.Flow
 
 interface WeatherRepoInterface {

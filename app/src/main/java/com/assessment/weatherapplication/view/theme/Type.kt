@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication.ui.theme
+package com.assessment.weatherapplication.view.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

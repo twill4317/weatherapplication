@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.data.local
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit

@@ -1,4 +1,4 @@
-package com.assessment.weatherapplication
+package com.assessment.weatherapplication.model
 
 // WeatherResponse.kt
 data class WeatherResponse(
