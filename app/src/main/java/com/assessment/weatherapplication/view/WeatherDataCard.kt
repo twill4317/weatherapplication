@@ -72,7 +72,7 @@ fun WeatherDataCard(visibilityViewModel: VisibilityViewModel, weatherViewModel: 
                                 textAlign = TextAlign.Center, /* Center the text */
                                 style = TextStyle(
                                     fontSize = 20.sp, /* Font size for location */
-                                    fontFamily = WeatherFontUtility.Poppins /* Custom Font Poppins */
+                                    fontFamily = WeatherFontUtility.poppins /* Custom Font Poppins */
                                 ),
                             )
                         }
@@ -82,7 +82,7 @@ fun WeatherDataCard(visibilityViewModel: VisibilityViewModel, weatherViewModel: 
                             textAlign = TextAlign.Center,
                             style = TextStyle(
                                 fontSize = 42.sp,
-                                fontFamily = WeatherFontUtility.Poppins
+                                fontFamily = WeatherFontUtility.poppinsBold
                             )
                         )
                     }

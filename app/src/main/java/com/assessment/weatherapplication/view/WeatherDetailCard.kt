@@ -60,7 +60,8 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                 Box(
                     Modifier
                         .width(123.dp)
-                        .height(113.dp)) {
+                        .height(123.dp)
+                ) {
                     AsyncImage(
                         model = ImageRequest.Builder(LocalContext.current)
                             .data("https:" + weatherData?.current?.condition?.icon)
@@ -68,6 +69,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             .build(),
                         contentDescription = weatherData?.current?.condition?.text,
                         modifier = Modifier.fillMaxSize()
+
                     )
                 }
                 // Display the location name and temperature (if available) from weatherData
@@ -77,8 +79,8 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                         text = it.name,
                         textAlign = TextAlign.Center,
                         style = TextStyle(
-                            fontSize = 20.sp,
-                            fontFamily = WeatherFontUtility.Poppins
+                            fontSize = 30.sp,
+                            fontFamily = WeatherFontUtility.poppinsBold
                         ),
                     )
                     // Temperature text (rounded to an integer and displayed in degrees)
@@ -86,15 +88,17 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                         text = "${weatherData?.current?.temp_f?.toInt()}°",
                         textAlign = TextAlign.Center,
                         style = TextStyle(
-                            fontSize = 42.sp,
-                            fontFamily = WeatherFontUtility.Poppins
+                            fontFamily = WeatherFontUtility.poppinsBold,
+                            fontWeight = FontWeight.W500,
+                            fontSize = 70.sp,
+                            lineHeight = 105.sp
                         )
                     )
                 }
                 // Row to display additional weather details like Humidity, UV, and Feels Like
                 Row(
                     Modifier
-                        .height(75.dp)
+                        .height(120.dp)
                         .fillMaxWidth()
                         .padding(16.dp)
                         .background(
@@ -117,7 +121,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = "Humidity",
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W600,
                                     fontSize = 12.sp,
                                     lineHeight = 18.sp,
@@ -128,7 +132,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = weatherData?.current?.humidity.toString() + "%",
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W500,
                                     fontSize = 15.sp,
                                     lineHeight = 22.5.sp,
@@ -150,7 +154,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = "UV",
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W500,
                                     fontSize = 12.sp,
                                     lineHeight = 18.sp,
@@ -161,7 +165,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = weatherData?.current?.uv.toString(),
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W500,
                                     fontSize = 15.sp,
                                     lineHeight = 22.5.sp,
@@ -182,7 +186,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = "Feels Like",
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W500,
                                     fontSize = 8.sp,
                                     lineHeight = 12.sp,
@@ -193,7 +197,7 @@ fun WeatherDetailCard(visibilityViewModel: VisibilityViewModel, weatherViewModel
                             Text(
                                 text = weatherData?.current?.feelslike_f.toString(),
                                 style = TextStyle(
-                                    fontFamily = WeatherFontUtility.Poppins,
+                                    fontFamily = WeatherFontUtility.poppins,
                                     fontWeight = FontWeight.W500,
                                     fontSize = 15.sp,
                                     lineHeight = 22.5.sp,

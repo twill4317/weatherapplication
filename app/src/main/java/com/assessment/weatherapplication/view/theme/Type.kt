@@ -9,7 +9,7 @@ import com.assessment.weatherapplication.utility.WeatherFontUtility
 // Set of Material typography styles to start with
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = WeatherFontUtility.Poppins,
+        fontFamily = WeatherFontUtility.poppins,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,

@@ -50,7 +50,7 @@ fun PlaceholderScreen (visibilityViewModel: VisibilityViewModel) {
                 style = TextStyle(
                     fontSize = 30.sp,
                     lineHeight = 45.sp,
-                    fontFamily = WeatherFontUtility.Poppins
+                    fontFamily = WeatherFontUtility.poppinsBold
                 ), modifier = Modifier
                     .padding(47.dp, 8.dp)
             )
@@ -60,7 +60,7 @@ fun PlaceholderScreen (visibilityViewModel: VisibilityViewModel) {
                 style = TextStyle(
                     fontSize = 15.sp,
                     lineHeight = 22.5.sp,
-                    fontFamily = WeatherFontUtility.Poppins
+                    fontFamily = WeatherFontUtility.poppins
                 ), modifier = Modifier
                     .padding(47.dp, 8.dp)
             )
