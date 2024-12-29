@@ -22,6 +22,9 @@ android {
         multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "apiKey", "\"${project.findProperty("apiKey")}\"")
+
     }
 
     buildTypes {
@@ -60,6 +63,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -108,4 +112,17 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(kotlin("reflect"))
+}
+
+tasks.register<JavaExec>("runApp") {
+    mainClass.set("com.assessment.weatherapplication.di") // Replace with your main class
+    classpath = sourceSets["main"].runtimeClasspath
+    args = listOf("-DapiKey=${project.findProperty("apiKey")}")
+}
+tasks.register<JavaExec>("runDebug") {
+    mainClass.set("com.assessment.weatherapplication.di") // Replace with your main class
+    classpath = sourceSets["main"].runtimeClasspath
+    args = listOf("-DapiKey=${project.findProperty("apiKey")}")
+    jvmArgs = listOf("-Xdebug", "-Xrunjdwp:server=y,transport=dt_socket,suspend=n,address=5005")  // Enable debugging
+
 }

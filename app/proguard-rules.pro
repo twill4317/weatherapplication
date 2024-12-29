@@ -27,3 +27,8 @@
 # Keep Hilt-related classes from being removed or obfuscated
 -keep class dagger.** { *; }
 -dontwarn dagger.**
+# proguard-rules.pro
+# Prevent obfuscation of BuildConfig class
+-keepclassmembers class **.BuildConfig {
+    public static final java.lang.String apiKey;
+}

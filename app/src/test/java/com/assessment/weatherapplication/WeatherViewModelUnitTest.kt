@@ -50,10 +50,10 @@ class WeatherViewModelUnitTest {
         Dispatchers.setMain(Dispatchers.Unconfined)
         weatherApiService = RetrofitModule.provideService()
         cityDataStore = CityDataStore(AppModule.provideContext(mainActivity.application))
-        mockWeatherRepository = WeatherRepository(weatherApiService, cityDataStore )
+        mockWeatherRepository = WeatherRepository(weatherApiService )
 
         // Initialize the ViewModel with the mocked repository
-        weatherViewModel = WeatherViewModel(mockWeatherRepository)
+        weatherViewModel = WeatherViewModel(mockWeatherRepository, cityDataStore)
     }
 
     @Test
@@ -67,7 +67,7 @@ class WeatherViewModelUnitTest {
         whenever(mockWeatherRepository.getWeather("London")).thenReturn(Result.success(expectedWeather))
 
         // Act: Call the ViewModel method
-        weatherViewModel.saveSelectedCity("London")
+        weatherViewModel.updateWeatherFromInput("London")
         weatherViewModel.getWeather()
 
         // Assert: Verify the ViewModel's LiveData holds the correct weather data
@@ -81,7 +81,7 @@ class WeatherViewModelUnitTest {
         whenever(mockWeatherRepository.getWeather("Test City")).thenReturn(Result.failure(Exception(errorMessage)))
 
         // Act: Call the ViewModel method
-        weatherViewModel.saveSelectedCity("Test city")
+        weatherViewModel.updateWeatherFromInput("Test city")
         weatherViewModel.getWeather()
 
         // Assert: Ensure that the weather data remains null on failure
