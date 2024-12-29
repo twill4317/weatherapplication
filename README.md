@@ -1,12 +1,4 @@
 ---
-- Initial commit **users will each require there own api key**
-  - Add your api key to WeatherRepository before running 
-
-- Incoming Commit 
-  - implement universal api key w security
-  - More Unit Test
-  - Data persistence bug fix
----
 # Weather Tracker App
 
 This is a **Weather Tracker** app built using **Kotlin**, **Jetpack Compose**, **MVVM Architecture**, and **Hilt** for Dependency Injection. The app fetches weather data for a selected city and displays it to the user. It also supports persistence of the selected city across app launches using **DataStore**.
